@@ -1,0 +1,261 @@
+
+body,html{
+    background-color: rgb(24, 27, 27);
+   
+    height: 97%;
+    margin:0;
+    padding: 5px;;
+}
+
+#container{
+    display: grid;
+    margin-left: 15px;
+    margin-right: 10px;
+    grid-template-columns: 19fr 10fr;
+    grid-template-rows: 1fr 12fr;
+    height: 100%;
+    background-color: rgb(12 255 221);
+   
+}
+
+
+#question{
+    background-color:rgb(31, 11, 87);
+    border: 3px solid rgb(9, 9, 105);
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 20px;
+    color: white;
+}
+#calculs{
+    background-color: rgb(12 255 221);
+    border: 3px solid rgb(31, 11, 87);
+    font-size: 60px;
+    display: grid;
+    grid-template-columns: 4fr 1fr; 
+}
+#calculMeme{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: rgb(0 255 255);
+}
+#touche{
+  
+    background-color: silver;
+    height: 530px;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+}
+#corriger{
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+#message{
+    font-size: 20px;
+}
+input{
+    font-size: 60px;
+    width: 80px;
+}
+#complement{
+    background-color: yellowgreen;
+    border: 3px solid rgb(31, 11, 87);
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+#progress{
+    background-color: yellowgreen;
+    border: 3px solid rgb(31, 11, 87);
+}
+
+#image{
+    background-color: rgb(200, 236, 128);
+    border: 3px solid rgb(31, 11, 87);
+}
+
+#caption{
+    background-color: rgb(84, 150, 22);
+    border: 3px solid rgb(31, 11, 87);
+}
+
+.ligneCalcul{
+    display:  none;
+  
+  }
+
+/* style the button */
+
+button{
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
+    border-radius: 10px;
+    }
+    button:hover {
+        background-color: #4CAF50; /* Green */
+        color: white;
+      }
+
+      #corriger{
+   
+        background-color: #0044ff;
+    
+    }
+    #pas{
+        background-color: #d0ff00;
+    }
+    #commencer{
+        background-color: #ff00f2;
+    }    
+
+
+    /* element cache */
+
+    #cache{
+        display: none;
+    }
+
+    .image{
+        background-color: rgb(0, 0, 0)
+        }
+        #image{
+            background-image:  url("tortue.jpg");
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+
+
+    /* modal styling */
+    
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+
+p{
+    font-size: 50px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-content{
+    background-color: red;
+}
+
+
+
+
+
+
+
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content2 {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+
+p{
+    font-size: 50px;
+    background-color: rgb(0, 89, 255);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-content2{
+    background-color: rgb(0, 17, 255);
+}
+
+/* style progress button */
+#progress{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 12px;
+ 
+}
+.etapes{
+    border: 5px solid rgb(4, 75, 4);
+    font-weight: bold;
+    border-radius: 0px 50px 50px 0px;
+}
+
+#stade2, #stade3, #stade4{
+    opacity: 0.3;
+}
+
+
+/* tableau de signes construction */
+
+#tbSignes{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+#un{
+    background-color: rgb(102, 133, 19);
+  
+}
+#deux{
+    background-color: rgb(217, 255, 0);
+    grid-column-start: 2;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+#trois{
+    background-color: rgb(123, 255, 0);
+}
+#quatre{
+    background-color: rgb(0, 255, 157);
+    grid-column-start: 2;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.bout{
+    border: 3px solid black;
+}

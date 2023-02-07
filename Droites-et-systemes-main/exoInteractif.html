@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styletest.css">
+    <title> </title>
+</head>
+<body>
+
+<div id="container">
+    <audio id="myAudio">
+        <source  src="welcome2.mp3" type="audio/ogg">
+    
+      </audio>
+      <audio class="son" id="non"> <source src="non.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="yes"> <source src="yes.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="endBravo"> <source src="endBravo2.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="welcomeBackground"> <source src="welcomeBackground.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq1"> <source src="soundEq1.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="background1"> <source src="background1.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq2"> <source src="soundEq2.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background2"> <source src="background2.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq3"> <source src="soundEq3.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background3"> <source src="background3.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq4"> <source src="soundEq4.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background4"> <source src="background4.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq5"> <source src="soundEq5.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background5"> <source src="background5.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq6"> <source src="soundEq6.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background6"> <source src="background6.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="congrulations"> <source src="congrulations.mp3" type="audio/ogg">   </audio>
+
+<div id="question">
+<h2>Résolvons ensemble l'équation suivante: <span id="afficheEquation"></span></h2>
+</div>
+
+<div id="calculs">
+<div id="calculMeme">
+<div class="ligneCalcul" id="one"></span></div>
+<div class="ligneCalcul" id="two"> </div>
+<div class="ligneCalcul" id="three"> </div>
+<div class="ligneCalcul" id="four"> </div>
+<div class="ligneCalcul" id="five"> </div>
+<div class="ligneCalcul" id="six"> </div>
+<div id="message"></div>
+</div>
+<div id="touche">
+    <button id="corriger" onclick="corriger()">Corriger <span style='font-size:75px'>🛂</span></button>
+    <button id="explication" onclick="expliquer()">Explication <span style='font-size:80px'>☝️</span></button>
+<button id="pas" onclick="saisPas()">Je sais pas <span style='font-size:75px'>🤷🏿‍♂️</span></button>
+<button id="commencer" onclick="commencer()">Commencer <span style='font-size:75px'>🕹️</span></button>
+<button onclick="nouvelleEquation()">Encore !! <span style='font-size:75px'>😋</span></button>
+</div>
+</div>
+
+
+
+<div id="complement">
+<div id="progress">
+  <div  class="etapes" id="stade1"> ETAPE 1:</br> Mettre les nombres constants  à droite</div>
+  <div class="etapes" id="stade2"> ETAPE 2: </br> Mettre les x à gauche de l'égalité</div>
+  <div  class="etapes"  id="stade3"> ETAPE 3</br> Retirer la valeur devant le x</div>
+  <div  class="etapes"  id="stade4"> ETAPE 4:</br> Simplifier si possible le résultat x</div>
+
+
+</div>
+<div id="image">
+    <div class="image" id="image1"></div>
+    <div class="image" id="image2"></div>
+    <div class="image" id="image3"></div>
+    <div class="image" id="image4"></div>
+    <div class="image" id="image5"></div>
+    <div class="image" id="image6"></div>
+</div>
+
+
+
+<div id="caption">
+
+</div>
+
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+     
+      <p>C'est FAUX !! je sais pas si tu es pret pour le controle !</br>
+        <span style='font-size:100px;'>&#128552;</span> </p>
+    </div>
+  
+  </div>
+  
+  
+  <div id="myModal2" class="modal2">
+  
+    <!-- Modal content -->
+    <div class="modal-content2">
+     
+      <p>On va mettre tous les nombres constants à droite pour commencer</br>
+        <span style='font-size:100px;'>&#128513;</span> </p>
+    </div>
+  </div>
+
+  
+</div>
+<script src="indexsimple.js"></script>
+</body>
+</html>

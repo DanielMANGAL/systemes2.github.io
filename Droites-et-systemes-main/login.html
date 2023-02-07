@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styletest2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js"></script>
+    <title> </title>
+    <!-- <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</head>
+<body>
+
+<div id="container">
+    <audio id="myAudio">
+        <source  src="welcome2.mp3" type="audio/ogg">
+    
+      </audio>
+      <audio class="son" id="non"> <source src="non.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="yes"> <source src="yes.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="endBravo"> <source src="endBravo2.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="welcomeBackground"> <source src="welcomeBackground.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq1"> <source src="tabSign1.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="background1"> <source src="background1.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq2"> <source src="tabSign2.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background2"> <source src="background2.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq3"> <source src="tabSign3.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background3"> <source src="background3.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq4"> <source src="tabSign4.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background4"> <source src="background4.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq5"> <source src="tabSign5.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background5"> <source src="background5.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq6"> <source src="tabSign6.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background6"> <source src="background6.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="congrulations"> <source src="congrulations.mp3" type="audio/ogg">   </audio>
+      <audio   id="presentation"> <source src="presentation.mp3" type="audio/ogg">   </audio>
+      <audio  id="presentationBackground"> <source src="presentationBackground.mp3" type="audio/ogg">   </audio>
+      <audio   id="attention"> <source src="attention.mp3" type="audio/ogg">   </audio>
+      <audio  id="attentionBackground"> <source src="attentionBackground.mp3" type="audio/ogg">   </audio>
+<div id="question">
+    <div id="boxQuestion">
+        <div id="enonce">
+        <h2>Nous nous plaçons dans un repère orthonormé avec <span id="afficheEquation"></span> <span style="font-size:10px">Score: <span id="score2">0</span>/6</span></h2>
+   
+      </div>
+         <!-- <div id="generalTouche">
+            <div id="presentation" onclick="demo()"><span >🚀</span></div>
+            <div id="attentionDiv" onclick="attentionner()"><span>🤫</span></div>
+        </div> -->
+    </div>
+</div>
+
+<div id="calculs">
+  <!-- &radic;<span style="text-decoration: overline">2</span> -->
+
+<div id="calculMeme">
+    <div id="question1">bli blo</div>
+    <div id="question2">bli blo</div>
+    <div id="question3">bli blo</div>
+    <div id="question4">bli blo</div>
+    <div id="question5">bli blo</div>
+    <div id="question6">bli blo</div>
+  <!-- <div class="ensemble">
+  <button class="N" style="display:none"> N</button>
+  <button class="Z" style="display:none"> Z</button>
+  <button class="D" style="display:none"> D</button>
+  <button class="Q" style="display:none"> Q</button>
+  <button class="R" style="display:none"> R</button>
+
+
+</div> -->
+<div class="ligneCalcul" id="one"></span></div>
+
+<div class="ligneCalcul" id="two">
+  <button class="N"> N</button>
+</div>
+<div class="ligneCalcul" id="three"><button class="Z"> Z</button> </div>
+<div class="ligneCalcul" id="four"><button class="D"> D</button> </div>
+<div class="ligneCalcul" id="five"> <button class="Q"> Q</button></div>
+<div class="ligneCalcul" id="six"> <button class="R">R</button></div>
+<div id="message"></div>
+</div>
+<div id="touche">
+    <button id="corriger"  >Corriger <span >🛂</span></button>
+    <button id="explication" onclick="expliquer10()">Explication <span >☝️</span></button>
+<button id="pas" onclick="saisPas10()">Je sais pas <span >🤷🏿‍♂️</span></button>
+<button id="commencer" onclick="commencer10()">Commencer <span >🕹️</span></button>
+<button id="newVectors">Encore !! <span >😋</span></button>
+</div>
+</div>
+
+
+
+<div id="complement">
+<div id="progress">
+  <div  class="etapes" id="stade1"> ETAPE 1:</br> Calculer un vecteur</div>
+  <div class="etapes" id="stade2"> ETAPE 2: </br> calcul une norme</div>
+  <div  class="etapes"  id="stade3"> ETAPE 3</br> Multiplier un vecteur par un réel</div>
+  <div  class="etapes"  id="stade4"> ETAPE 4:</br> Additionner deux vecteurs</div>
+
+
+</div>
+<div id="image">
+    <div class="image" id="image1"></div>
+    <div class="image" id="image2"></div>
+    <div class="image" id="image3"></div>
+    <div class="image" id="image4"></div>
+    <div class="image" id="image5"></div>
+    <div class="image" id="image6"></div>
+</div>
+
+
+
+<div id="caption">
+
+</div>
+
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+     
+      <p>C'est FAUX !! Je sais pas si tu es pret pour le controle !</br>
+        <span style='font-size:100px;'>&#128552;</span> </p>
+    </div>
+  
+  </div>
+  
+  
+  <div id="myModal2" class="modal2">
+  
+    <!-- Modal content -->
+    <div class="modal-content2">
+     
+      <p>Identifer le coefficient directeur ainsi que l'ordonnée à l'origine</br>
+        <span style='font-size:100px;'>&#128513;</span> </p>
+    </div>
+  </div>
+
+  <div id="myModal3" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+     
+      <p>Bravo, voilà ton score :</br>
+        <span id="scorePresentation"></span>
+      </br> <button onclick="nouvelleEquation()" id="again" > Recommencer</button>
+     </p>
+    </div>
+  </div>
+
+  
+
+
+  
+</div>
+</div>
+
+<div id="myModal4" class="modal4" style="font-size:10px">
+  
+    <!-- Modal content -->
+    <div class="modal-content4">
+    
+        <p>EVALUATION VECTEURS:</br>
+            S'incrire au devoir:</br>
+            <div id="infos">
+            <div id="element">
+            <h3>Nom:</h3> <input type="text"  size="150" placeholder="nom" id="nom" onkeyup="this.value=this.value.toUpperCase()"/>
+            <h3>Prenom:</h3>
+            <input type="text"  id="prenom"  placeholder="prenom"  onkeyup="this.value=this.value.toLowerCase()"/>
+            <h3>Identifiant:</h3>
+            <input id="identifiant"  placeholder="identifiant"  type="password" />
+        </div>
+        <div id="evaluer2">
+          </br> <button   id="evaluer" > COMMENCER</button>
+        </div>
+    </div>
+         
+    </div>
+</p>
+  </div>
+
+  
+
+
+  <div id="myModal5" class="modal4" style="font-size:10px">
+  
+    <!-- Modal content -->
+    <div class="modal-content4">
+    
+        <p>ATTENTION AU TEMPS</br>
+           En cliquant sur le bouton 'lancer le chrono', vous démarrez l'examen et ne disposez que de 20 minutes.</br>
+        
+          </br> <button   id="timer" > LANCER le chrono</button>
+        </div>
+    </div>
+         
+    </div>
+</p>
+  </div>
+
+  
+
+
+  
+</div>
+</div>
+
+<div id="myModal6" class="modal4" style="font-size:10px">
+  
+    <!-- Modal content -->
+    <div class="modal-content4">
+    
+        <p>D.R.MANGAL te remercie!! </br> <span id="afficheNom"></span></br>
+            Voici ta note:  <span id="afficheNote"></span>/6</br>
+
+        
+          </br> <button   id="autre" > Faire place à quelqu'un dautre !</button>
+        </div>
+    </div>
+         
+    </div>
+</p>
+  </div>
+
+  
+
+  <div id="wait" class="modal4" style="font-size:10px">
+  
+    <!-- Modal content -->
+    <div class="modal-content4">
+    
+        <p>Patience !! </br>
+             nous transférons votre note à D.R.MANGAL </br> <span id="afficheNom"></span></br>
+            Ne pas fermer la page ou la recharger</br>
+
+        
+         
+        </div>
+    </div>
+         
+    </div>
+</p>
+  </div>
+
+  
+</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+<!-- <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script type="module">
+//   let person = prompt("Please enter your name", "Daniel Decouachy");
+document.getElementById('myModal4').style.display='block'
+    const jsConfetti = new JSConfetti()
+    
+
+    function confettiFY(){
+        jsConfetti.addConfetti()
+    }
+    let image= document.getElementById("image")
+let images= document.querySelectorAll(".image")
+var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+let welcomeSound= document.getElementById("myAudio")
+let no=document.getElementById("non")
+let yes =document.getElementById("yes")
+let endBravo = document.getElementById("endBravo")
+let welcomeBackground = document.getElementById("welcomeBackground")
+let soundEq1 = document.getElementById("soundEq1")
+let background1 =  document.getElementById("background1")
+let soundEq2 = document.getElementById("soundEq2")
+let background2 =  document.getElementById("background2")
+let soundEq3 = document.getElementById("soundEq3")
+let background3 =  document.getElementById("background3")
+let soundEq4 = document.getElementById("soundEq4")
+let background4 =  document.getElementById("background4")
+let soundEq5 = document.getElementById("soundEq5")
+let background5 =  document.getElementById("background5")
+let soundEq6 = document.getElementById("soundEq6")
+let background6 =  document.getElementById("background6")
+let congrulations = document.getElementById("congrulations")
+let presentation =  document.getElementById("presentation")
+let presentationBackground = document.getElementById("presentationBackground")
+let attention =document.getElementById("attention")
+let attentionBackground = document.getElementById("attentionBackground")
+let stade1 =document.getElementById("stade1")
+let stade2 =document.getElementById("stade2")
+let stade3 =document.getElementById("stade3")
+let stade4 =document.getElementById("stade4")
+
+let stade=  document.querySelectorAll('.etapes')
+
+let son= document.querySelectorAll('.son')
+
+
+let L=["image1", "image2", "image3", "image4","image5","image6"]
+let imageSources=[ "url('fleur.jpg')",
+"url('surinam.jpg')",
+"url('marche.jpg')",
+"url('fusee.jpg')",
+"url('caiman.jpg')",
+"url('wassai.jpg')",
+"url('drapeau.jpg')",
+"url('perroquet.webp')",
+"url('toucan.jpg')",
+"url('iguane.jpeg')",
+"url('anaconda.jpg')",
+"url('dauphin1.jpg')",
+"url('dauphin2.jpg')",
+"url('mante1.jpeg')",
+"url('mante2.jpeg')",
+"url('dragon1.jpg')",
+"url('dragon2.jpeg')",
+"url('colibri.webp')",
+"url('colibri2.html')",
+"url('tapir.jpeg')",
+"url('agouti3.jpeg')",
+"url('agouti2.jpg')",
+"url('agouti1.jpg')"
+
+
+]
+
+let numImage=0
+
+// shuffleL()
+function shuffleL(){
+    // for (i = L.length -1; i > 0; i--) {
+    //     j = Math.floor(Math.random() * i)
+    //     k = L[i]
+    //     L[i] = L[j]
+    //     L[j] = k
+    //   }
+}
+function shuffleimageSources(){
+    for (i = imageSources.length -1; i > 0; i--) {
+        j = Math.floor(Math.random() * i)
+        k = imageSources[i]
+        imageSources[i] = imageSources[j]
+        imageSources[j] = k
+      }
+}
+// shuffleimageSources()
+
+function randomNumber(){
+    return Math.floor(Math.random()*40-20)
+}
+let a=randomNumber()
+let b=randomNumber()
+let c=randomNumber()
+let d=randomNumber()
+
+
+function randomNumberTrue(){
+    const a = Math.floor(Math.random()*50)
+    const b= -a
+    const n= Math.floor(Math.random()*8)
+    const p=Math.floor(Math.random()*1)
+    const c = ((-1)**(p)*b*(10**(-n))).toFixed(n)
+    // const c = (1/3).toFixed(3)
+    console.log('b '+b)
+    const q= Math.floor(Math.random()*50)
+    const d= (-1)**(p)*a+'/'+q
+    // const e= [Math.sqrt(2),Math.sqrt(3),Math.sqrt(5), Math.PI]
+    // const e= '<msqrt> 5</msqrt>'
+   const e=[' &radic;<span style="text-decoration: overline">2</span>',' &radic;<span style="text-decoration: overline">5</span>','&pi;']
+   //un type de pi '&#8719;'
+//   const e2= '<math><msqrt><mi>2</mi></msqrt></math>'
+    const f=Math.floor(Math.random()*3)
+    // const h=Math.floor(Math.random()*4)
+    let  h=Math.floor(Math.random()*4)+1
+    // h=4
+    console.log(e)
+    const g= (-1)**(p)*a+e[f]
+    const L=[a,b,c,d,g]
+    
+    return L[h]
+    // return g
+}
+let choix;
+let score=0
+let counter=0;
+const choixN= document.querySelector('.N')
+const choixZ= document.querySelector('.Z')
+const choixD= document.querySelector('.D')
+const choixQ= document.querySelector('.Q')
+const choixR= document.querySelector('.R')
+
+choixN.addEventListener('click',()=>{
+    choix='N'
+    check()
+    console.log(choix)
+})
+choixZ.addEventListener('click',()=>{
+    choix='Z'
+    check()
+    console.log(choix)
+})
+choixD.addEventListener('click',()=>{
+    choix='D'
+    check()
+    console.log(choix)
+})
+choixQ.addEventListener('click',()=>{
+    choix='Q'
+    check()
+    console.log(choix)
+})
+choixR.addEventListener('click',()=>{
+    choix='R'
+    check()
+    console.log(choix)
+})
+
+// ecrire le nombre qu'on recherche
+const nombre= document.getElementById('afficheEquation')
+class randomNumberTrue2{
+    constructor(){
+        this.naturel=Math.floor(Math.random()*50)+1
+        this.relatif= -this.naturel
+        this.puissance=Math.floor(Math.random()*8)
+        this.signe= Math.floor(Math.random()*1)
+        this.deciaml= ((-1)**(this.puissance)*this.relatif*(10**(-this.puissance))).toFixed(this.puissance)
+        this.denominateur= Math.floor(Math.random()*50)+1
+        this.quotient=(-1)**(this.puissance)*this.naturel+'/'+this.denominateur
+        this.irrationnelList=[' &radic;<span style="text-decoration: overline">2</span>',' &radic;<span style="text-decoration: overline">5</span>','&pi;']
+        this.indiceIrrationnel= Math.floor(Math.random()*3)
+        this.a=this.irrationnelList[this.indiceIrrationnel]
+        this.irrationel= (-1)**(this.puissance)*this.naturel+this.irrationnelList[this.indiceIrrationnel]
+        this.nbList=[this.naturel,this.relatif,this.deciaml,this.quotient,this.irrationel]
+        this.indiceNb=Math.floor(Math.random()*4)+1
+        // this.indiceNb=1
+        // this.nb= this.nbList[this.indiceNb]
+        this.nb= this.nbList[this.indiceNb]
+        if(this.indiceNb==0){
+            this.solution='N'
+        }
+        if(this.indiceNb==1){
+            this.solution='Z'
+        }
+        if(this.indiceNb==2){
+            this.solution='D'
+        }
+        if(this.indiceNb==3){
+            console.log('nou la ')
+            console.log(33/40)
+            console.log((33/40).toString().length)
+            console.log('le nombr'+ this.nb)
+            console.log('longueur '+this.naturel/+this.denominateur.toString().length)
+            // console.log(Number.isInteger(2/3))
+            // console.log('18  '+(18/48).toString().length)
+            console.log('nb entier'+ Number.isInteger(((-1)**(this.puissance)*this.naturel/+this.denominateur)))
+            if(Number.isInteger(((-1)**(this.puissance)*this.naturel/+this.denominateur))){
+                if((-1)**(this.puissance)*this.naturel/+this.denominateur>0){
+                    this.solution='N'
+                }
+                if((-1)**(this.puissance)*this.naturel/+this.denominateur<0){
+                    this.solution='Z'
+                }
+            }else if( (this.naturel/+this.denominateur).toString().length<10){
+                this.solution='D'
+            }else{
+                this.solution='Q'
+            }
+       
+          console.log('sol'+ this.solution)
+        }
+        if(this.indiceNb==4){
+            this.solution='R'
+        }
+    }
+}
+let  nombreNouveau = new randomNumberTrue2()
+nombre.innerHTML= nombreNouveau.nb +'   score   '+score+'/'+counter
+// console.log(nombreNouveau)
+// console.log('irrLis'+ nombreNouveau.irrationnelList)
+// console.log('a'+nombreNouveau.a)
+// console.log('indice'+nombreNouveau.indiceIrrationnel)
+// console.log('irrationnel'+ nombreNouveau.irrationel)
+let premiereFois=true
+function check(){
+ console.log('counter'+ counter)
+    if(counter<6){
+   
+    if(nombreNouveau.solution==choix){
+       
+        if(premiereFois){
+        score++}
+        bonneReponse()
+        nombreNouveau = new randomNumberTrue2()
+        premiereFois=true
+       
+        document.getElementById(L[counter]).style.backgroundColor="transparent"
+        counter++
+        nombre.innerHTML= nombreNouveau.nb +'   score   '+score+'/'+counter
+    }
+    else{
+        mauvaiseReponse()
+        premiereFois=false
+    }}
+    if(score==6){
+     
+        reussiReponses()
+       
+    }
+    if(counter==6){
+        console.log('ok ou pa')
+        InsertData()
+     
+        document.getElementById('scorePresentation').innerHTML=score+'/'+counter
+        document.getElementById('myModal3').style.display= "block"
+    }
+   
+
+
+
+}
+
+
+
+document.getElementById("one").innerHTML= "Le coefficient directeur a de la fonction affine est "+ '<input type="text" id="one1" placeholder="10?"></input>'+ " et l'ordonnée à l'origine est" +'<input type="text" id="one2" placeholder="10?"></input>'
+document.getElementById("two").innerHTML="La fonction va s'annuler en x <sub>0</sub>="+'-b/a='+'<input type="text" id="two1" placeholder="10?">'+'/'+'<input type="text" id="two2" placeholder="10?">'
+document.getElementById("three").innerHTML="On alors x <sub>0</sub>="+ '<input type="text" id="three1" placeholder="10?">'
+document.getElementById("four").innerHTML="Le  coefficient directeur a de la fonction affine est: " +'<select id="four1" name="INBOUND" placeholder="INBOUND" style="font-size:34px"><option>positive<option>nulle<option> négative</select>' +"La fonction est donc "+'<select name="INBOUND" placeholder="INBOUND" style="font-size:34px" id="four2"><option>croissante<option>décroissante<option> constante </select>'
+document.getElementById("five").innerHTML="La fonction est d'abord "+ '<select id="five1" name="INBOUND" style="font-size:34px" placeholder="INBOUND"><option>positive<option>nulle<option> négative</select>'+", puis elle s'annule et enfin, elle est "+ '<select id="five2" name="INBOUND" style="font-size:34px" placeholder="INBOUND"><option>positive<option>nulle<option> négative</select>'
+document.getElementById("six").innerHTML='Voici le tableau de signes de la fonction f :</br>'+'<div id="tbSignes"><div class="bout" id="un"> x</div><div class="bout" id="deux"> <div id="deux1"> <select id="six1" name="INBOUND" style="font-size:34px" placeholder="INBOUND"><option>-&infin;<option>+&infin;</select></div><div id="deux2"> </div><div id="deux3"> <input type="text" id="six2"  placeholder="INBOUND" style="width: 90px"></div><div id="deux4"> </div><div id="deux5"> <select id="six3" name="INBOUND" style="font-size:34px" style="width:150px" placeholder="INBOUND"><option>-&infin;<option>+&infin;</select></div></div><div class="bout" id="trois">signe de f(x)</div><div class="bout" id="quatre"><div id="cinq1"> </div><div id="cinq2"> <select id="six4"  style="font-size:34px" name="INBOUND" placeholder="INBOUND"><option>-<option>+</select></div><div id="cinq3"> <input type="text" id="six5"  placeholder="INBOUND" style="width: 40px"></div><div id="five4"><select id="six6" name="INBOUND" style="font-size:34px" placeholder="INBOUND"><option>-<option>+</select></div><div id="cinq5"> </div></div></div>'
+
+
+
+let reponse1= document.getElementById("one")
+let reponse11=document.getElementById("one1")
+let reponse12=document.getElementById("one2")
+let reponse2= document.getElementById("two")
+let reponse21=document.getElementById("two1")
+let reponse22=document.getElementById("two2")
+let reponse3= document.getElementById("three")
+let reponse31=document.getElementById("three1")
+let reponse32=document.getElementById("three2")
+let reponse4= document.getElementById("four")
+let reponse41=document.getElementById("four1")
+let reponse42=document.getElementById("four2")
+let reponse5= document.getElementById("five")
+let reponse51=document.getElementById("five1")
+let reponse52=document.getElementById("five2")
+let reponse6= document.getElementById("six")
+let reponse61=document.getElementById("six1")
+let reponse62=document.getElementById("six2")
+let reponse63=document.getElementById("six3")
+let reponse64=document.getElementById("six4")
+let reponse65=document.getElementById("six5")
+let reponse66=document.getElementById("six6")
+
+let message= document.getElementById("message")
+
+let cle=1;
+
+
+// reponse1.style.fontSize="15px"
+// reponse2.style.fontSize="15px"
+// reponse3.style.fontSize="15px"
+// reponse4.style.fontSize="15px"
+// reponse5.style.fontSize="15px"
+// reponse6.style.fontSize="15px"
+
+
+function corriger(){
+ 
+    if(cle==1){
+        
+    if(reponse11.value==a && reponse12.value==b ){
+        message.innerHTML="c'est la bonne réponse &#128521;"
+
+        reponse2.style.display="block"
+        document.getElementById(L[0]).style.backgroundColor="transparent"
+        cle=2
+        yes.play()
+    }
+ 
+    else{
+        mauvaiseReponse()
+        setTimeout(nombreConstants,3000)
+    }   
+}
+    else if (cle==2){
+    
+      
+          console.log("ton choix 1 "+ reponse21.value)
+          console.log("ton choix 2  "+reponse22.value )
+          console.log("le -b="+-b)
+          console.log("le a: "+ a)
+    if( (reponse21.value==(-b))&& reponse22.value==a){
+        message.innerHTML="c'est la bonne réponse &#128521;"
+
+        reponse3.style.display="block"
+        cle=3
+        document.getElementById(L[1]).style.backgroundColor="transparent"
+        yes.play()
+    }
+ 
+    else{
+        mauvaiseReponse()
+    }   
+
+    }
+    else if (cle==3){
+       console.log("tonchoixRes"+ reponse31.value)
+       console.log("Reponseattendue "+ reduce(-b,a))
+        if(reponse31.value==reduce(-b,a)|| reponse31.value==(-b/a)){
+            message.innerHTML="c'est la bonne réponse 3&#128521;"
+            reponse4.style.display="block"
+            cle=4
+            document.getElementById(L[2]).style.backgroundColor="transparent"
+            yes.play()
+        }
+        else{
+            mauvaiseReponse()
+        }
+    }
+    else if(cle==4){  
+
+        if(a>0){
+            if(reponse41.value=="positive" && reponse42.value=="croissante"){
+                console.log("on y est1")
+                document.getElementById(L[3]).style.backgroundColor="transparent"
+                cle=5
+                reponse5.style.display="block"
+               yes.play()
+            }
+            else{
+                console.log("on y est2")
+                mauvaiseReponse()
+            }
+        }
+    
+        else if(a==0){
+            if(reponse41.value=="nulle" && reponse42.value=="constante"){
+               
+                document.getElementById(L[3]).style.backgroundColor="transparent"
+                cle=5
+                reponse5.innerHTML="La fonction est toujours "+'<select id="five2" name="INBOUND" placeholder="INBOUND"><option>positive<option>nulle<option> négative</select>'
+                reponse5.style.display="block"
+               yes.play()
+               
+            }
+        else{
+            mauvaiseReponse()
+        }}
+        else if(a<0){
+            console.log("okok")
+            if(reponse41.value=="négative" && reponse42.value=="décroissante"){
+                document.getElementById(L[3]).style.backgroundColor="transparent"
+                cle=5
+                reponse5.style.display="block"
+               yes.play()
+            }
+        else{
+            mauvaiseReponse()
+        }
+    
+    
+    
+    
+    }
+}
+    else if (cle==5){
+        if(a>0){
+            if(reponse51.value=="négative" && reponse52.value=="positive"){
+                document.getElementById(L[4]).style.backgroundColor="transparent"
+                cle=6
+                reponse6.style.display="block"
+               yes.play()
+            }
+            else{
+                mauvaiseReponse()
+            }
+        }
+    
+        else if(a == 0){
+        if(b>0){
+            if(reponse51.value=="positive"){
+                document.getElementById(L[4]).style.backgroundColor="transparent"
+                cle=6
+                reponse6.style.display="block"
+               yes.play()
+            }
+        else{
+            mauvaiseReponse()
+        }}
+        else if(b==0){
+            if(reponse51.value=="nulle"){
+                document.getElementById(L[4]).style.backgroundColor="transparent"
+                cle=6
+                reponse6.style.display="block"
+               yes.play()
+            }
+        else{
+            mauvaiseReponse()
+        }
+        }
+        else if(b<0){
+            if(reponse51.value=="negative"){
+                document.getElementById(L[4]).style.backgroundColor="transparent"
+                cle=6
+                reponse6.style.display="block"
+               yes.play()
+            }
+        else{
+            mauvaiseReponse()
+        }
+
+        }
+    
+    
+    }
+        else if(a< 0){
+            if(reponse41.value=="négative" && reponse42.value=="décroissante"){
+                document.getElementById(L[4]).style.backgroundColor="transparent"
+                cle=6
+                reponse6.style.display="block"
+               yes.play()
+            }
+        else{
+            mauvaiseReponse()
+        }
+    
+    
+    }
+}
+    else if (cle==6){
+        var valeur1= reponse61.value
+        var valeur2= reponse63.value
+    console.log("61"+ reponse61.value)
+    console.log("62"+reponse62.value)
+    console.log("63"+reponse63.value)
+    console.log("deuxieme ligne")
+    console.log("64"+reponse64.value)
+    console.log("65"+reponse65.value)
+    console.log("66"+reponse66.value)
+        if(reponse61.value=="-\u221e"  && reponse63.value=="+\u221e"  && (reponse62.value==(-b/a) || reponse62.value==reduce(-b,a))){
+
+            if(a==0){
+                        if(b<0){
+                            if(reponse64.value=="-" && reponse65.value=="-" && reponse66.value=="-"){
+                                pauseAll()
+                                message.innerHTML="Bravo, c'est fini ! Tu as réussi l'équation ! "
+                                reponse2.style.display="block"
+                               
+                                document.getElementById(L[5]).style.backgroundColor="transparent"
+                                cle=7
+                                endBravo.play()
+                                congrulations.play()
+                                confettiBoucle()
+                                confettiBoucle()
+                            }
+                            else{
+                                mauvaiseReponse()
+                            }
+                        }
+                        else if(b==0){
+                            if(reponse64.value=="0" && reponse65.value=="0" && reponse66.value=="0"){
+                                pauseAll()
+                                message.innerHTML="Bravo, c'est fini ! Tu as réussi l'équation ! "
+                                reponse2.style.display="block"
+                               
+                                document.getElementById(L[5]).style.backgroundColor="transparent"
+                                cle=7
+                                endBravo.play()
+                                congrulations.play()
+                                confettiBoucle()
+                                confettiBoucle()
+                            }
+                            else{
+                                mauvaiseReponse()
+                            }
+                        }
+                        else if(b>0){
+                            if(reponse64.value=="+" && reponse65.value=="+" && reponse66.value=="+"){
+                                pauseAll()
+                                message.innerHTML="Bravo, c'est fini ! Tu as réussi l'équation ! "
+                                reponse2.style.display="block"
+                               
+                                document.getElementById(L[5]).style.backgroundColor="transparent"
+                                cle=7
+                                endBravo.play()
+                                congrulations.play()
+                                confettiBoucle()
+                            }
+                            else{
+                                mauvaiseReponse()
+                            }
+                        }
+            }
+            else if(a>0){
+            if(reponse64.value=="-" && reponse65.value=="0" && reponse66.value=="+"){
+                confettiBoucle()
+            pauseAll()
+            message.innerHTML="Bravo, c'est fini ! Tu as réussi l'équation ! "
+            reponse2.style.display="block"
+           
+            document.getElementById(L[5]).style.backgroundColor="transparent"
+            cle=7
+            endBravo.play()
+            congrulations.play()
+            confettiBoucle()
+            }
+            else{
+                mauvaiseReponse()
+            }
+        
+        }
+        else if(a<0){
+            if(reponse64.value=="+" && reponse65.value=="0" && reponse66.value=="-"){
+                confettiBoucle()
+            pauseAll()
+            message.innerHTML="Bravo, c'est fini ! Tu as réussi l'équation ! "
+            reponse2.style.display="block"
+           
+            document.getElementById(L[5]).style.backgroundColor="transparent"
+            cle=7
+            endBravo.play()
+            congrulations.play()
+            confettiBoucle()
+            }
+            else{
+                mauvaiseReponse()
+            }
+        
+        }
+
+        numImage++ 
+       
+        
+    }  
+    else {
+   
+        mauvaiseReponse()
+    } 
+    } progressBar()
+}
+
+
+
+function commencer(){
+    progressBar()
+    background1.volume=0.1
+    // soundEq1.play()
+    // background1.play()
+    pauseAll()
+    // nombreConstants()
+    reponse1.style.display="block"
+    // document.getElementById("afficheEquation").innerHTML=a+'x+'+b
+    image.style.backgroundImage=imageSources[0]
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function saisPas(){
+    console.log("la cle avant SP"+ cle)
+    if(cle==1){
+        console.log("la ou non ? ")
+        document.getElementById("one").innerHTML= "Le coefficient directeur a de la fonction affine est "+ a+ " et l'ordonnée à l'origine est " +b
+        reponse2.style.display="block"
+        cle=2 
+document.getElementById(L[0]).style.backgroundColor="transparent"
+    }
+    else if(cle==2){
+        console.log("ici aussi ?")
+        document.getElementById("two").innerHTML="La fonction va s'annuler en x <sub>0</sub>="+'-b/a='+(-b)+'/'+a
+
+        reponse3.style.display="block"
+        cle=3
+        document.getElementById(L[1]).style.backgroundColor="transparent"
+        
+            }
+
+        else if (cle==3){
+            document.getElementById("three").innerHTML="On a x<sub>0</sub>="+reduce(-b,a)
+            reponse4.style.display="block"
+            cle=4
+            document.getElementById(L[2]).style.backgroundColor="transparent"
+            
+        }
+ else if(cle==4){
+
+    reponse5.style.display="block"
+    cle=5
+    document.getElementById(L[3]).style.backgroundColor="transparent"
+        if(a>0){
+            document.getElementById("four").innerHTML="Le coefficient directeur de la fonction est positif. La fonction est donc croissante."
+        }
+        else if(a==0){
+            document.getElementById("four").innerHTML="Le coefficient directeur de la fonction est nul. La fonction est donc constante."
+        }
+        else if(a<0){
+            document.getElementById("four").innerHTML="Le coefficient directeur de la fonction est négatif. La fonction est donc décroissante."
+        }
+ 
+
+    
+                
+                    }
+else if(cle==5){  
+    if(a>0){
+        document.getElementById("five").innerHTML="La fonction est d'abord négative, puis elle s'annule et enfin, elle est positive."
+    }
+    else if(a==0){
+        document.getElementById("five").innerHTML="La fonction est toujours est du signe de l'ordonnée à l'origine."
+        if(b<0){
+            document.getElementById("five").innerHTML+="</br>Elle est toujours négative."
+        }
+        else if(b==0){
+            document.getElementById("five").innerHTML+="</br>Elle est toujours nulle"
+        }
+        else if(b>0){
+            document.getElementById("five").innerHTML+="</br>Elle est toujours positive."
+        }
+    }
+    else if(a<0){
+        document.getElementById("five").innerHTML="La fonction est d'abord positive, puis elle s'annule et enfin, elle est négative." }
+   document.getElementById(L[4]).style.backgroundColor="transparent"
+        cle=6
+   reponse6.style.display="block"
+
+}
+
+                            
+    else if(cle==6){
+        document.getElementById(L[5]).style.backgroundColor="transparent"
+        numImage++ 
+        if(a>0){
+            document.getElementById("six").innerHTML=`
+            
+    Voici le tableau de signes de la fonction f :</br>
+    <div id="tbSignes">
+    <div class="bout" id="un"> x</div>
+    <div class="bout" id="deux"> 
+    <div id="deux1"> 
+        -&infin;</div>
+        <div id="deux2"> </div>
+        <div id="deux3"> ${reduce(-b,a)}</div>
+        <div id="deux4"> </div>
+        <div id="deux5"> +&infin;</div></div>
+    <div class="bout" id="trois">signe de f(x)</div>
+    <div class="bout" id="quatre">
+        <div id="cinq1"> 
+        </div><div id="cinq2"> -</div>
+        <div id="cinq3"> 0</div>
+        <div id="five4">+</div>
+        <div id="cinq5"> </div>
+        </div>
+        
+        </div>
+  
+            
+            
+            
+            
+            `
+        }
+        else if(a==0){
+if(b>0){
+    document.getElementById("six").innerHTML=`
+             Voici le tableau de signes de la fonction f :</br>
+        <div id="tbSignes">
+        <div class="bout" id="un"> x</div>
+        <div class="bout" id="deux"> 
+        <div id="deux1"> 
+            -&infin;</div>
+            <div id="deux2"> </div>
+            <div id="deux3"> ${reduce(-b,a)}</div>
+            <div id="deux4"> </div>
+            <div id="deux5"> +&infin;</div></div>
+        <div class="bout" id="trois">signe de f(x)</div>
+        <div class="bout" id="quatre">
+            <div id="cinq1"> 
+            </div><div id="cinq2"> </div>
+            <div id="cinq3"> +</div>
+            <div id="five4"></div>
+            <div id="cinq5"> </div>
+            </div>
+            
+            </div>`
+
+        }
+    else if(b==0){
+        document.getElementById("six").innerHTML=`
+            
+        Voici le tableau de signes de la fonction f :</br>
+        <div id="tbSignes">
+        <div class="bout" id="un"> x</div>
+        <div class="bout" id="deux"> 
+        <div id="deux1"> 
+            -&infin;</div>
+            <div id="deux2"> </div>
+            <div id="deux3"> ${reduce(-b,a)}</div>
+            <div id="deux4"> </div>
+            <div id="deux5"> +&infin;</div></div>
+        <div class="bout" id="trois">signe de f(x)</div>
+        <div class="bout" id="quatre">
+            <div id="cinq1"> 
+            </div><div id="cinq2"> </div>
+            <div id="cinq3"> 0</div>
+            <div id="five4"></div>
+            <div id="cinq5"> </div>
+            </div>
+            
+            </div>`
+
+    }
+    else if(b<0){
+        document.getElementById("six").innerHTML=`
+        Voici le tableau de signes de la fonction f :</br>
+        <div id="tbSignes">
+        <div class="bout" id="un"> x</div>
+        <div class="bout" id="deux"> 
+        <div id="deux1"> 
+            -&infin;</div>
+            <div id="deux2"> </div>
+            <div id="deux3"> ${reduce(-b,a)}</div>
+            <div id="deux4"> </div>
+            <div id="deux5"> +&infin;</div></div>
+        <div class="bout" id="trois">signe de f(x)</div>
+        <div class="bout" id="quatre">
+            <div id="cinq1"> 
+            </div><div id="cinq2"> </div>
+            <div id="cinq3"> -</div>
+            <div id="five4"></div>
+            <div id="cinq5"> </div>
+            </div>
+            
+            </div>`
+
+
+    }
+    
+    
+    
+    }
+    else if (a<0){
+        document.getElementById("six").innerHTML=`
+        Voici le tableau de signes de la fonction f :</br>
+        <div id="tbSignes">
+        <div class="bout" id="un"> x</div>
+        <div class="bout" id="deux"> 
+        <div id="deux1"> 
+            -&infin;</div>
+            <div id="deux2"> </div>
+            <div id="deux3"> ${reduce(-b,a)}</div>
+            <div id="deux4"> </div>
+            <div id="deux5"> +&infin;</div></div>
+        <div class="bout" id="trois">signe de f(x)</div>
+        <div class="bout" id="quatre">
+            <div id="cinq1"> 
+            </div><div id="cinq2"> +</div>
+            <div id="cinq3"> 0</div>
+            <div id="five4">-</div>
+            <div id="cinq5"> </div>
+            </div>
+            
+            </div>`
+      
+
+    }                                                                                                                              
+                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                           
+    }
+                                                                                progressBar()
+                                                                            }                                                                                                         
+
+function nouvelleEquation(){
+    
+   
+    shuffleL()
+    // nombreConstants()
+
+    a=randomNumber()
+    b=randomNumber()
+    c=randomNumber()
+    d=randomNumber()
+    // reponse1.style.display="block"
+    // document.getElementById("afficheEquation").innerHTML='hisCiFy'
+    document.getElementById('myModal3').style.display= "none"
+    score=0
+    counter=0
+    nombre.innerHTML= nombreNouveau.nb +'   score   '+score+'/'+counter
+    // commencer()
+    pauseAll()
+
+
+
+  images.forEach(image=>{
+    image.style.backgroundColor="black"
+  })
+ 
+image.style.backgroundImage=imageSources[numImage]
+
+
+
+// document.getElementById("afficheEquation").innerHTML='hisCiFy'
+
+}
+
+
+
+function reduce(number,denomin){
+    var gcd = function gcd(a,b){
+      return b ? gcd(b, a%b) : a;
+    };
+    gcd = gcd(number,denomin);
+    
+  if(denomin/gcd==1){
+    return number/gcd
+  }
+    else{
+        if(denomin/gcd<0){
+            return -number/gcd +"/"+ -denomin/gcd
+        }
+        else {
+            return number/gcd +"/"+ denomin/gcd
+        }
+
+    }
+
+  }
+
+
+
+function mauvaiseReponse(){
+    modal.style.display= "block"
+    setTimeout(retireAffiche,1000)
+    no.play()
+
+}
+
+function bonneReponse(){
+    yes.play()
+}
+function reussiReponses(){
+    endBravo.play()
+    congrulations.play()
+    confettiBoucle()
+}
+ function retireAffiche(){
+    modal.style.display= "none"
+ }
+
+ function nombreConstants(){
+    modal2.style.display= "block"
+    setTimeout(retireAffiche2,500)
+ }
+
+ function retireAffiche2(){
+    modal2.style.display= "none"
+ }
+
+function pauseAll(){
+    son.forEach(son=>{
+        son.pause()
+        son.currentTime= 0;
+    })
+}
+ function expliquer(){
+    pauseAll()
+    if(cle==1){
+        background1.play()
+        background1.volume=0.1
+        soundEq1.play()
+    }
+    else if(cle==2){
+       
+        background2.volume=0.4
+        soundEq2.play()
+        background2.play()
+    }
+    else if(cle==3){
+       
+        background3.volume=0.3
+        soundEq3.play()
+        background3.play()
+    }
+    else if(cle==4){
+       
+        background4.volume=0.2
+        soundEq4.volume = 0.9
+        soundEq4.play()
+        background4.play()
+    }
+    else if(cle==5){
+       
+        background5.volume=0.2
+        soundEq5.volume = 1
+        soundEq5.play()
+        background5.play()
+    }
+    else if(cle==6){
+       
+   
+        soundEq6.play()
+        background6.play()
+    }
+ }
+
+ function progressBar(){
+    if(cle == 1){
+        stade1.style.opacity=1
+      
+    }
+    else if((1<cle) && (cle<4) ){
+
+        stade2.style.opacity=1
+    
+    }
+    else if((3<cle) && (cle<6) ){
+
+        stade3.style.opacity=1
+    }
+    else{
+        stade4.style.opacity=1
+    }
+ }
+
+ function resetProgressBar(){
+    stade.forEach(stade=>{
+        stade.style.opacity="0.2";
+    })
+    stade1.style.opacity="1";
+ }
+
+let password= 0
+ function demo(){
+if (password==0){
+    confettiBoucle()
+    // confettiFY()
+//    commencer()
+//     setTimeout(commencer,20)
+//     setTimeout(saisPas,400)
+//     setTimeout(saisPas,500)
+//     setTimeout(saisPas,600)
+//     setTimeout(saisPas,700)
+//     setTimeout(saisPas,800)
+//     setTimeout(saisPas,900)
+//     setTimeout(saisPas,1000)
+    setTimeout(nouvelleEquation,10000)
+    // setTimeout(commencer,12000)
+    setTimeout(corriger, 20000)
+    setTimeout(saisPas,30000)
+    setTimeout(saisPas,33000)
+    setTimeout(saisPas,36000)
+    setTimeout(saisPas,39000)
+    setTimeout(saisPas,42000)
+    setTimeout(saisPas,45000)
+    setTimeout(saisPas,45500)
+    setTimeout(nouvelleEquation,53000)
+    setTimeout(saisPas,60000)
+    setTimeout(saisPas,62000)
+    setTimeout(saisPas,64000)
+    setTimeout(saisPas,6600)
+    setTimeout(saisPas,68000)
+    setTimeout(saisPas,70000)
+    setTimeout(saisPas,70500)
+    setTimeout(nouvelleEquation,72000)
+    setTimeout(saisPas,73000)
+    setTimeout(saisPas,74000)
+    setTimeout(saisPas,75000)
+    setTimeout(saisPas,7600)
+    setTimeout(saisPas,77000)
+    setTimeout(saisPas,78000)
+    setTimeout(saisPas,78500)
+    setTimeout(nouvelleEquation,80000)
+    setTimeout(saisPas,80500)
+    setTimeout(saisPas,81000)
+    setTimeout(saisPas,81500)
+    setTimeout(saisPas,8200)
+    setTimeout(saisPas,82000)
+    setTimeout(saisPas,82500)
+    setTimeout(saisPas,82900)
+    setTimeout(nouvelleEquation,84000)
+    setTimeout(saisPas,84200)
+    setTimeout(saisPas,84400)
+    setTimeout(saisPas,84600)
+    setTimeout(saisPas,84800)
+    setTimeout(saisPas,85000)
+    setTimeout(saisPas,85200)
+    setTimeout(saisPas,85400)
+    setTimeout(nouvelleEquation,86000)
+    setTimeout(saisPas,86200)
+    setTimeout(saisPas,86400)
+    setTimeout(saisPas,86600)
+    setTimeout(saisPas,86800)
+    setTimeout(saisPas,86000)
+    setTimeout(saisPas,86200)
+    setTimeout(saisPas,86400)
+    setTimeout(nouvelleEquation,87000)
+    setTimeout(saisPas,87100)
+    setTimeout(saisPas,87200)
+    setTimeout(saisPas,87300)
+    setTimeout(saisPas,87400)
+    setTimeout(saisPas,87500)
+    setTimeout(saisPas,87600)
+    setTimeout(saisPas,87700)
+
+   
+    setTimeout(nouvelleEquation,95000)
+
+    presentationBackground.volume = "0.1"
+    presentationBackground.play()
+    presentation.play()
+}
+password=2
+
+ }
+
+function attentionner(){
+    attentionBackground.volume="0.4"
+    attention.play()
+    attentionBackground.play()
+ }
+
+//  import JSConfetti from 'js-confetti'
+
+// const jsConfetti = new JSConfetti()
+
+// jsConfetti.addConfetti()
+
+// function confettiFY(){
+//     jsConfetti.addConfetti();
+// }
+
+function confettiBoucle(){
+    setTimeout(confettiFY,0 )
+    setTimeout(confettiFY, 200)
+    setTimeout(confettiFY,400 )
+    setTimeout(confettiFY, 600)
+    setTimeout(confettiFY, 1000)
+    setTimeout(confettiFY, 1300)
+    setTimeout(confettiFY, 1700)
+    setTimeout(confettiFY, 2000)
+    setTimeout(confettiFY,0 )
+    setTimeout(confettiFY, 2200)
+    setTimeout(confettiFY,2400 )
+    setTimeout(confettiFY, 2900)
+    setTimeout(confettiFY, 3300)
+    setTimeout(confettiFY, 4000)
+    setTimeout(confettiFY, 6000)
+    setTimeout(confettiFY, 9000)
+}
+
+let nom;
+let prenom;
+let identifiant;
+document.getElementById('myModal5').style.display="none"
+document.getElementById('myModal6').style.display="none"
+document.getElementById('wait').style.display="none"
+document.getElementById('evaluer').addEventListener('click',()=>{
+    console.log('cliqué')
+     nom= document.getElementById('nom').value
+ prenom= document.getElementById('prenom').value
+ identifiant =document.getElementById('identifiant').value
+
+ document.getElementById('myModal4').style.display="none"
+ document.getElementById('myModal5').style.display="block"
+})
+document.getElementById('timer').addEventListener('click',()=>{
+    console.log('chrono')
+    document.getElementById('myModal5').style.display="none"
+    // setTimeout(20000,chrono())
+    setTimeout(chrono, 20000);
+})
+document.getElementById('autre').addEventListener('click',()=>{
+    window.location.reload()
+}
+)
+function chrono(){
+  
+    console.log('affiche wait')
+    InsertData()
+
+ 
+
+}
+const url='file:///C:/Users/manga/Documents/firebase/vecteursOperations2/login.html'
+const elem= document.querySelector('body')
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+function enregistrer(){
+    console.log('cliqué')
+     nom= document.getElementById("name").value
+ prenom= document.getElementById("prenom").value
+ identifiant =document.getElementById("identifiant").value
+ document.getElementById('myModel4').style.display='none'
+ window.open(url,'','fullscreen=yes')
+ document.documentElement.requestFullscreen()
+ openFullscreen() 
+}
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyD6w_v7kpsLdMM2-hCS8ttAimw9a0ojois",
+    authDomain: "dev4-21e31.firebaseapp.com",
+    databaseURL: "https://dev4-21e31-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "dev4-21e31",
+    storageBucket: "dev4-21e31.appspot.com",
+    messagingSenderId: "295555229229",
+    appId: "1:295555229229:web:bf17cb5d78591e9980faa4"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+        //THIS IS WHERE YOU PASTE THE CODE TO CONNECT TO YOUR OWN DATABASE
+        //Copy and paste the CDN bit of code from your app that you created on Firebase.
+        //The script tag above is already there, so careful not to have duplicate script tags.
+        //After you've copied and pasted, just delete the unnecessary script tags. 
+   
+
+        import {getDatabase, ref, get, set, child, update, remove}
+        from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"//Copy and Paste the URL from near the top of the CDN you pasted in from firebase
+        // (the one where you imported "initializeApp" from),
+        //but change "firebase-app" to "firebase-database"
+        
+
+        const db = getDatabase();
+
+        var enterID = document.querySelector("#enterID");
+        var enterName = document.querySelector("#enterName");
+        var enterAge = document.querySelector("#enterAge");
+        var findID = document.querySelector("#findID");
+        var findName = document.querySelector("#findName");
+        var findAge = document.querySelector("#findAge");
+      
+
+        var insertBtn = document.querySelector("#insert");
+        var updateBtn = document.querySelector("#update");
+        var removeBtn = document.querySelector("#remove");
+        var findBtn = document.querySelector("#find");
+
+       
+// Import the functions you need from the SDKs you need
+
+
+
+
+
+// New vector
+let xA= Math.floor(Math.random()*10)
+let yA= Math.floor(Math.random()*10)
+let xB= Math.floor(Math.random()*10)
+let yB= Math.floor(Math.random()*10)
+let xC= Math.floor(Math.random()*10)
+let yC= Math.floor(Math.random()*10)
+let xD= Math.floor(Math.random()*10)
+let yD= Math.floor(Math.random()*10)
+let m=Math.floor(Math.random()*20-10)
+let n=Math.floor(Math.random()*20-10)
+let questions={
+    q1: `Le vecteur <span style="text-decoration:overline; font-size:25px">AB</span></span><sup><sup>\></sup></sup> a pour coordonnées
+    <div class='aligne'>
+    <table>
+  <tr>
+    <td><input id="ra1"></input>-<input id="ra3"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="ra2"></input>-<input id="ra4"></input></td>
+  </tr>
+</table> =<table >
+  <tr>
+    <td><input id="ra5"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="ra6"></input></td>
+  </tr>
+</table>
+</div>
+
+
+`,
+    r1a: xA,
+    r1b: xB,
+    r2a: yA,
+    r2b: yB,
+    q2:`La norme du vecteur <span style="text-decoration:overline; font-size:25px">AB</span></span><sup><sup>\></sup></sup> est égale à <span style="white-space: nowrap;font-size:15px">
+&radic;<span style="text-decoration:overline; font-size:25px">&nbsp;<input id="rb1"></input>² + <input id="rb2"></input>²&nbsp;</span></span>,
+ c'est à dire à <span style="white-space: nowrap;font-size:15px">
+&radic;<span style="text-decoration:overline; font-size:25px">&nbsp;<input id="rb3"></input>&nbsp;</span></span>`,
+    q3: ` On a 
+    ${n}<span style="text-decoration:overline; font-size:25px">AB</span></span><sup><sup>\></sup></sup>+`
+        +`
+        ${m}<span style="text-decoration:overline; font-size:25px">CD</span></span><sup><sup>\></sup></sup>=
+        <input id="rc1"></input>
+        <table>
+  <tr>
+   <td><input id="rc2"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rc3"></input></td>
+  </tr>
+</table>+
+<input id="rc4"></input>
+        <table>
+  <tr>
+   <td><input id="rc5"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rc6"></input></td>
+  </tr>
+</table>
+</br>`,
+q4:`
+=
+
+        <table>
+  <tr>
+   <td><input id="rd1"></input>&times;<input id="rd2"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rd3"></input>&times;<input id="rd4"></input></td>
+  </tr>
+</table>+<table>
+  <tr>
+   <td><input id="rd5"></input>&times;<input id="rd6"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rd7"></input>&times;<input id="rd8"></input></td>
+  </tr>
+</table>
+</table>
+</br>
+`,
+
+
+q5:`
+=<table>
+  <tr>
+   <td><input id="re1"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="re2"></input></td>
+  </tr>
+</table>+
+
+        <table>
+  <tr>
+   <td><input id="re3"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="re4"></input></td>
+  </tr>
+</table>`,
+
+q6:
+`
+=
+<table>
+  <tr>
+   <td><input id="rf1"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rf2"></input></td>
+  </tr>
+</table>
+
+
+
+
+        `,
+}
+const question1= document.getElementById('question1')
+question1.innerHTML=questions.q1
+const question2= document.getElementById('question2')
+question2.style.display="none"
+question2.innerHTML=questions.q2
+const question3= document.getElementById('question3')
+question3.style.display="none"
+question3.innerHTML=questions.q3
+
+const question4= document.getElementById('question4')
+question4.style.display="none"
+question4.innerHTML=questions.q4
+const question5= document.getElementById('question5')
+question5.style.display="none"
+question5.innerHTML=questions.q5
+const question6= document.getElementById('question6')
+question6.style.display="none"
+question6.innerHTML=questions.q6
+nombre.style.fontSize='35px'
+  nombre.innerHTML=`A(${xA};${yA}), B(${xB};${yB}), C(${xC};${yC}) et D(${xD};${yD}). `
+
+
+let ra1=document.getElementById('ra1')
+let ra2=document.getElementById('ra2')
+let ra3=document.getElementById('ra3')
+let ra4=document.getElementById('ra4')
+let ra5=document.getElementById('ra5')
+let ra6=document.getElementById('ra6')
+
+let Ra1=xB
+let Ra2=yB
+let Ra3=xA
+let Ra4=yA
+let Ra5=xB-xA
+let Ra6=yB-yA
+
+
+let rb1=document.getElementById('rb1')
+let rb2=document.getElementById('rb2')
+let rb3=document.getElementById('rb3')
+let Rb1=Ra5
+let Rb2=Ra6
+let Rb3=Math.pow(Rb1, 2)+Math.pow(Rb2, 2);
+
+
+
+let rc1=document.getElementById('rc1')
+let rc2=document.getElementById('rc2')
+let rc3=document.getElementById('rc3')
+let rc4=document.getElementById('rc4')
+let rc5=document.getElementById('rc5')
+let rc6=document.getElementById('rc6')
+
+let Rc1=n
+let Rc2= xB-xA
+let Rc3= yB-yA
+let Rc4=m
+let Rc5= xD-xC
+let Rc6= yD-yC
+
+
+let rd1=document.getElementById('rd1')
+let rd2=document.getElementById('rd2')
+let rd3=document.getElementById('rd3')
+let rd4=document.getElementById('rd4')
+let rd5=document.getElementById('rd5')
+let rd6=document.getElementById('rd6')
+let rd7=document.getElementById('rd7')
+let rd8=document.getElementById('rd8')
+
+let Rd1=n
+let Rd2= Rc2
+let Rd3= n
+let Rd4=Rc3
+let Rd5=m
+let Rd6=Rc5
+let Rd7=m
+let Rd8=Rc6
+
+let re1=document.getElementById('re1')
+let re2=document.getElementById('re2')
+let re3=document.getElementById('re3')
+let re4=document.getElementById('re4')
+let re5=document.getElementById('re5')
+let re6=document.getElementById('re6')
+
+let Re1=n*Rc2
+let Re2= n*Rc3
+let Re3= m*Rc5
+let Re4=m*Rc6
+
+let rf1=document.getElementById('rf1')
+let rf2=document.getElementById('rf2')
+let Rf1=Re1+Re3
+let Rf2= Re2+Re4
+
+const afficheScore= document.getElementById('score2')
+function afficheScore2(){
+    afficheScore.innerHTML=score2
+    console.log('afficheScore')
+}
+document.getElementById('corriger').addEventListener('click',()=>{
+    verif()
+})
+function initialize3(){
+    window.location.reload()
+}
+function initialize2(){
+    person = prompt("Please enter your name", "Daniel Decouachy");
+    // a retrier
+    sloto=3
+ xA= Math.floor(Math.random()*10)
+ yA= Math.floor(Math.random()*10)
+ xB= Math.floor(Math.random()*10)
+ yB= Math.floor(Math.random()*10)
+ xC= Math.floor(Math.random()*10)
+ yC= Math.floor(Math.random()*10)
+xD= Math.floor(Math.random()*10)
+yD= Math.floor(Math.random()*10)
+ m=Math.floor(Math.random()*20-10)
+ n=Math.floor(Math.random()*20-10)
+
+ 
+ Ra1=xB
+ Ra2=yB
+ Ra3=xA
+Ra4=yA
+Ra5=xB-xA
+ Ra6=yB-yA
+  Rb1=Ra5
+Rb2=Ra6
+ Rb3=Math.pow(Rb1, 2)+Math.pow(Rb2, 2);
+  Rc1=n
+ Rc2= xB-xA
+  Rc3= yB-yA
+ Rc4=m
+ Rc5= xD-xC
+ Rc6= yD-yC
+  Rd1=n
+ Rd2= Rc2
+ Rd3= n
+ Rd4=Rc3
+ Rd5=m
+Rd6=Rc5
+ Rd7=m
+ Rd8=Rc6
+  Re1=n*Rc2
+ Re2= n*Rc3
+ Re3= m*Rc5
+ Re4=m*Rc6
+  Rf1=Re1+Re3
+ Rf2= Re2+Re4
+    score=0
+    nombre.innerHTML=`A(${xA};${yA}), B(${xB};${yB}), C(${xC};${yC}) et D(${xD};${yD}). `
+    afficheScore2()
+    
+ 
+    
+    questions={
+    q1: `Le vecteur <span style="text-decoration:overline; font-size:25px">AB</span></span><sup><sup>\></sup></sup> a pour coordonnées
+    <div class='aligne'>
+    <table>
+  <tr>
+    <td><input id="ra1"></input>-<input id="ra3"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="ra2"></input>-<input id="ra4"></input></td>
+  </tr>
+</table> =<table >
+  <tr>
+    <td><input id="ra5"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="ra6"></input></td>
+  </tr>
+</table>
+</div>
+
+
+`,
+    r1a: xA,
+    r1b: xB,
+    r2a: yA,
+    r2b: yB,
+    q2:`La norme du vecteur <span style="text-decoration:overline; font-size:25px">AB</span></span><sup><sup>\></sup></sup> est égale à <span style="white-space: nowrap;font-size:15px">
+&radic;<span style="text-decoration:overline; font-size:25px">&nbsp;<input id="rb1"></input>² + <input id="rb2"></input>²&nbsp;</span></span>,
+ c'est à dire à <span style="white-space: nowrap;font-size:15px">
+&radic;<span style="text-decoration:overline; font-size:25px">&nbsp;<input id="rb3"></input>&nbsp;</span></span>`,
+    q3: ` On a 
+    ${n}<span style="text-decoration:overline; font-size:25px">AB</span></span><sup><sup>\></sup></sup>+`
+        +`
+        ${m}<span style="text-decoration:overline; font-size:25px">CD</span></span><sup><sup>\></sup></sup>=
+        <input id="rc1"></input>
+        <table>
+  <tr>
+   <td><input id="rc2"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rc3"></input></td>
+  </tr>
+</table>+
+<input id="rc4"></input>
+        <table>
+  <tr>
+   <td><input id="rc5"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rc6"></input></td>
+  </tr>
+</table>
+</br>`,
+q4:`
+=
+
+        <table>
+  <tr>
+   <td><input id="rd1"></input>&times;<input id="rd2"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rd3"></input>&times;<input id="rd4"></input></td>
+  </tr>
+</table>+<table>
+  <tr>
+   <td><input id="rd5"></input>&times;<input id="rd6"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rd7"></input>&times;<input id="rd8"></input></td>
+  </tr>
+</table>
+</table>
+</br>
+`,
+
+
+q5:`
+=<table>
+  <tr>
+   <td><input id="re1"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="re2"></input></td>
+  </tr>
+</table>+
+
+        <table>
+  <tr>
+   <td><input id="re3"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="re4"></input></td>
+  </tr>
+</table>`,
+
+q6:
+`
+=
+<table>
+  <tr>
+   <td><input id="rf1"></input></td>
+    
+  </tr>
+  <tr>
+  
+    <td><input id="rf2"></input></td>
+  </tr>
+</table>
+
+
+
+
+        `,
+      
+}
+
+
+ rc1=document.getElementById('rc1')
+ rc2=document.getElementById('rc2')
+ rc3=document.getElementById('rc3')
+ rc4=document.getElementById('rc4')
+ rc5=document.getElementById('rc5')
+ rc6=document.getElementById('rc6')
+        question2.style.display="none"
+        question3.innerHTML=questions.q3
+    question3.style.display="block"
+    question4.style.display="none"
+    question5.style.display="none"
+    question6.style.display="none"
+    console.log('n '+n)
+        console.log('m '+ m)
+        console.log(Rc1)    
+        console.log(Rc4)
+}
+document.getElementById('newVectors').addEventListener('click',()=>{
+    initialize3()
+})
+let score2=0
+let sloto=1
+let first= true
+function verif(){
+    console.log('first'+first)
+if(sloto==1){
+    if(ra1.value==Ra1 &&
+    ra2.value==Ra2 &&
+    ra3.value==Ra3 &&
+    ra4.value==Ra4 &&
+    ra5.value==Ra5 &&
+    ra6.value==Ra6 
+    ){
+        if (first){
+            score2++
+            afficheScore2()
+         
+        }
+        question2.style.display='block'
+        first=true
+        sloto++
+        bonneReponse()
+  
+    }
+    else{
+        console.log('fausse reppone')
+        first=false
+        mauvaiseReponse()
+    }}
+else if(sloto==2){
+    if(rb1.value==Rb1 &&
+    rb2.value==Rb2 &&
+    rb3.value==Rb3 
+  
+    ){
+        question3.style.display='block'
+        sloto++
+        bonneReponse()
+        if (first){
+            score2++
+            afficheScore2()
+        }
+        first=true
+    }
+    else{
+        console.log('fausse reppone')
+        first=false
+        mauvaiseReponse()
+    }
+
+}
+else if(sloto==3){
+    if(rc1.value==Rc1 &&
+    rc2.value==Rc2 &&
+    rc3.value==Rc3 &&
+    rc4.value==Rc4 &&
+    rc5.value==Rc5 &&
+    rc6.value==Rc6 
+  
+    ){
+        bonneReponse()
+        question4.style.display='block'
+        sloto++
+        if (first){
+            score2++
+            afficheScore2()
+        }
+        first=true
+    }
+    else{
+    
+        first=false
+        console.log('fausse reppone 3')
+        console.log('n '+n)
+        console.log('rc1 '+ rc1)
+        console.log('Rc1 '+Rc1)
+        console.log('rc2 '+ rc2)
+        console.log('Rc2 '+Rc2)
+    
+        console.log('rc3 '+ rc3)
+        console.log('Rc3 '+Rc3)
+        console.log('m '+m)
+        console.log('rc4 '+ rc4.value)
+        console.log('Rc4'+Rc4)
+        console.log('rc5 '+ rc5.value)
+        console.log('Rc5'+Rc5)
+        console.log('rc6 '+ rc6.value)
+        console.log('Rc6 '+Rc6)
+      
+        mauvaiseReponse()
+    }
+
+}
+else if(sloto==4){
+    if(rd1.value==Rd1 &&
+    rd2.value==Rd2 &&
+    rd3.value==Rd3 &&
+    rd4.value==Rd4 &&
+    rd5.value==Rd5 &&
+    rd6.value==Rd6 &&
+    rd7.value==Rd7 &&
+    rd8.value==Rd8 
+    ){
+        bonneReponse()
+        question5.style.display='block'
+        sloto++
+        if (first){
+            score2++
+            afficheScore2()
+        }
+        first=true
+    }
+    else{
+        console.log('fausse reppone')
+        first=false
+        mauvaiseReponse()
+    }}
+    else if(sloto==5){
+    if(re1.value==Re1 &&
+    re2.value==Re2 &&
+    re3.value==Re3 &&
+    re4.value==Re4 
+    ){
+        bonneReponse()
+        question6.style.display='block'
+        sloto++
+        if (first){
+            score2++
+            afficheScore2()
+        }
+        first=true
+    }
+    else{
+        console.log('fausse reppone')
+        first=false
+        mauvaiseReponse()
+    }}
+    else if(sloto==6){
+    if(rf1.value==Rf1 &&
+    rf2.value==Rf2 
+ 
+    ){
+        bonneReponse()
+       console.log('ok reussi')
+       if (first){
+            score2++
+            afficheScore2()
+        }
+        first=true
+        if(score2==6){
+            endBravo.play()
+                                congrulations.play()
+                                confettiBoucle()
+     reussiReponses()
+    
+ }
+ InsertData()
+    }
+    else{
+        console.log('fausse reppone')
+        first=false
+        mauvaiseReponse()
+    }}
+}
+
+
+</script>
+</body>
+</html>

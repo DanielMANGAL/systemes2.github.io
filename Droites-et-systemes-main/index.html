@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styletest2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js"></script>
+    <title> </title>
+    <!-- <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Lobster&display=swap" rel="stylesheet">
+<body>
+
+<div id="container">
+    <audio id="myAudio">
+        <source  src="welcome2.mp3" type="audio/ogg">
+    
+      </audio>
+      <audio class="son" id="non"> <source src="non.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="yes"> <source src="yes.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="endBravo"> <source src="endBravo2.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="welcomeBackground"> <source src="welcomeBackground.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq1"> <source src="tabSign1.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="background1"> <source src="background1.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq2"> <source src="tabSign2.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background2"> <source src="background2.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq3"> <source src="tabSign3.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background3"> <source src="background3.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq4"> <source src="tabSign4.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background4"> <source src="background4.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq5"> <source src="tabSign5.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background5"> <source src="background5.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="soundEq6"> <source src="tabSign6.mp3" type="audio/ogg">   </audio>
+      <audio class="son"  id="background6"> <source src="background6.mp3" type="audio/ogg">   </audio>
+      <audio class="son" id="congrulations"> <source src="congrulations.mp3" type="audio/ogg">   </audio>
+      <audio   id="presentation"> <source src="presentation.mp3" type="audio/ogg">   </audio>
+      <audio  id="presentationBackground"> <source src="presentationBackground.mp3" type="audio/ogg">   </audio>
+      <audio   id="attention"> <source src="attention.mp3" type="audio/ogg">   </audio>
+      <audio  id="attentionBackground"> <source src="attentionBackground.mp3" type="audio/ogg">   </audio>
+<div id="question">
+    <div id="boxQuestion">
+        <div id="enonce">
+        <h2>Nous nous plaçons dans un repère orthonormé avec <span id="afficheEquation"></span> <span style="font-size:10px"></h2>
+   
+      </div>
+         <!-- <div id="generalTouche">
+            <div id="presentation" onclick="demo()"><span >🚀</span></div>
+            <div id="attentionDiv" onclick="attentionner()"><span>🤫</span></div>
+        </div> -->
+    </div>
+</div>
+
+<div id="calculs">
+  <!-- &radic;<span style="text-decoration: overline">2</span> -->
+
+<div id="calculMeme">
+    <span id="question1">bli blo</span><span id="question2">bli blo</span>
+    
+    <div id="question3">bli blo</div>
+    <span id="question4">bli blo</span>
+    <span id="question5">bli blo</span>
+    <span class="hide" id="question6">bli blo</span><span id="question7">bli blo</span>
+    <span class="hide" id="question8">bli blo</span>
+    <span class="hide" id="question9">bli blo</span>
+    <span class="hide" id="question10">bli blo</span>
+  <!-- <div class="ensemble">
+
+</div> -->
+<div class="ligneCalcul" id="one"></span></div>
+
+<div class="ligneCalcul" id="two">
+  <button class="N"> N</button>
+</div>
+<div></div>
+<div class="ligneCalcul" id="three"><button class="Z"> Z</button> </div>
+<div class="ligneCalcul" id="four"><button class="D"> D</button> </div>
+<div class="ligneCalcul" id="five"> <button class="Q"> Q</button></div>
+<div class="ligneCalcul" id="six"> <button class="R">R</button></div>
+<div id="message"></div>
+</div>
+<div id="touche">
+    <button id="corriger"  >Corriger <span >🛂</span></button>
+    <button id="explication" onclick="expliquer10()">Explication <span >☝️</span></button>
+<button id="pas" >Je sais pas <span >🤷🏿‍♂️</span></button>
+<button id="commencer" onclick="commencer10()">Commencer <span >🕹️</span></button>
+<button id="newVectors">Encore !! <span >😋</span></button>
+</div>
+</div>
+
+
+
+<div id="complement" class="taille">
+<div id="progress">
+  <div id="identite" class="taille">Joueur: <span id="identity" class="taille"> Daniel deCouachy</span> <span id="nbEntrainements" ></span></div>
+  <div id="minuteur">
+    <div>
+  Score: <span id="score2" class="taille">0</span>/7</span>
+  <div id="timer" >
+    temps: <span id="minutes" class="taille" ></span>m<span id="secondes" class="taille">10</span>s
+    </div>
+
+</div>
+
+<div id="maxEntrainements">
+  Eleve avec le plus d'entrainements(<span id="nbMaxEntrainements"></span>) :</br> <span id="nameMaxEntrainements" style="font-size:20px"></span>
+</div>
+
+</div>
+  <div  class="etapes" id="stade1" style="display:none"> ETAPE 1:</br> Calculer un vecteur</div>
+  <div class="etapes" id="stade2" style="display:none"> ETAPE 2: </br> calcul une norme</div>
+  <div  class="etapes"  id="stade3" style="display:none"> ETAPE 3</br> Multiplier un vecteur par un réel</div>
+  <div  class="etapes"  id="stade4" style="display:none"> ETAPE 4:</br> Additionner deux vecteurs</div>
+
+
+</div>
+<div id="image" style="display:none">
+    <div class="image" id="image1" style="display:none"></div>
+    <div class="image" id="image2"style="display:none" ></div>
+    <div class="image" id="image3" style="display:none"></div>
+    <div class="image" id="image4" style="display:none"></div>
+    <div class="image" id="image5" style="display:none"></div>
+    <div class="image" id="image6"style="display:none"></div>
+</div>
+
+
+
+<div id="caption">
+ <span style="font-size:20px"> Il s'avère que nous avons de très bons éléments parmi nous, pourquoi ne pas profiter de leur aide? &#129488;</span>:
+  <div id="resultatsCamarades"></div>
+<div id="derniereNote" style="display:none"></div>
+</div>
+<div id="commentaire">
+  <!-- 
+  <input type="text" id="commentaire" placeholder="  D.R.MANGAL nous a fait part de son intéret concernant la satisfaction de ses usagers de l'application.
+   Une zone aux commentaires et améliorations  a été incorporé:"> </input> -->
+   <textarea name="Text1" id="commentaires" cols="65" rows="6" placeholder="D.R.MANGAL nous a fait part de son intéret concernant la satisfaction de ses usagers de l'application.
+   Une zone aux commentaires et améliorations  a été incorporé:"></textarea>
+  </div>
+
+
+
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+     
+      <p>C'est FAUX !! Je sais pas si tu es pret pour le controle !</br>
+        <span style='font-size:100px;'>&#128552;</span> </p>
+    </div>
+  
+  </div>
+  
+  
+  <div id="myModal2" class="modal2">
+  
+    <!-- Modal content -->
+    <div class="modal-content2">
+     
+      <p>Identifer le coefficient directeur ainsi que l'ordonnée à l'origine</br>
+        <span style='font-size:100px;'>&#128513;</span> </p>
+    </div>
+  </div>
+
+  <div id="myModal3" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+     
+      <p>Bravo, voilà ton score :</br>
+        <span id="scorePresentation"></span>
+      </br> <button onclick="nouvelleEquation()" id="again" > Recommencer</button>
+     </p>
+    </div>
+  </div>
+
+  
+
+
+  
+</div>
+</div>
+
+<div id="myModal4" class="modal4" style="font-size:10px">
+  
+    <!-- Modal content -->
+    <div class="modal-content4">
+    
+        <p>EVALUATION VECTEURS:</br>
+            S'incrire au devoir:</br>
+            <div id="infos">
+            <div id="element">
+            <h3>Nom:</h3> <input type="text"  size="150" placeholder="nom" id="nom" onkeyup="this.value=this.value.toUpperCase()"/>
+            <h3>Prenom:</h3>
+            <input type="text"  id="prenom"  placeholder="prenom"  onkeyup="this.value=this.value.toLowerCase()"/>
+         
+        </div>
+        <div id="evaluer2">
+            <h3>Email:</h3>
+            <input id="email"  placeholder="email"  type="text" />
+            
+            <h3>Identifiant:</h3>
+            <input id="identifiant"  placeholder="identifiant"  type="password" />
+          </br> <button   id="evaluer" style="display:none" > COMMENCER</button>
+
+
+    
+          <button id="login">LOGIN </button>
+        </div>
+    </div>
+         
+    </div>
+</p>
+  </div>
+
+  
+
+
+  <div id="myModal5" class="modal4" style="font-size:10px">
+  
+    <!-- Modal content -->
+    <div class="modal-content4">
+    
+        <p>ATTENTION AU TEMPS</br>
+           D.R.MANGAL vous prévient qu'en cliquant sur le bouton 'lancer le chrono', vous démarrez l'examen et ne disposez que <span id="afficheTiming"></span> secondes.</br>
+        
+          </br> <button   id="timer2" > LANCER le chrono</button>
+        </div>
+    </div>
+         
+    </div>
+</p>
+  </div>
+
+  
+
+
+  
+</div>
+</div>
+
+<div id="myModal6" class="modal4" style="font-size:10px">
+  
+    <!-- Modal content -->
+    <div class="modal-content5">
+    
+        <p id="taille4">D.R.MANGAL te remercie!! </br> <span id="afficheNom"></span></br>
+            Voici ta note:  <span id="afficheNote"></span>/7
+            en  <span id="afficheTime"></span>s</br>
+            Ton classement: <span id="afficheClassement"></span>
+        </br> <button   id="autre" > Faire place à quelqu'un dautre !</button>
+        </br> <button   id="beginAgain" > Non ! J'aime trop l'appli ! </button>
+        <div id="resultatsCamarades2"></div>
+        </div>
+      
+    </div>
+   
+    </div>
+</p>
+  </div>
+
+  
+
+  <div id="wait" class="modal4" style="font-size:10px">
+  
+    <!-- Modal content -->
+    <div class="modal-content4">
+    
+        <p>Patience !! </br>
+             Nous transférons votre note à D.R.MANGAL </br> <span id="afficheNom"></span></br>
+            Ne pas fermer la page ou la recharger</br>
+
+        
+         
+        </div>
+    </div>
+         
+    <div id="wait2" class="modal4" style="font-size:10px">
+  
+        <!-- Modal content -->
+        <div class="modal-content4">
+        
+            <p>Patience !! </br>
+                 Nous vérifions si D.R.MANGAL vous autorise à vous inscrire</br> <span id="afficheNom"></span></br>
+                Ne pas fermer la page ou la recharger</br>
+    
+            
+             
+            </div>
+        </div>
+
+
+        <div id="refus" class="modal4" style="font-size:10px">
+  
+            <!-- Modal content -->
+            <div class="modal-content4">
+            
+                <p>Malheureusement après vérification:</br> <span id="afficheNom"></span></br>
+                    D.R.MANGAL vous refuse l'accès à ce contenu</br>
+        
+                
+                  </br> <button   id="autre2" > Faire place à quelqu'un dautre !</button>
+                </div>
+            </div>
+                 
+            </div>
+
+
+
+    </div>
+</p>
+  </div>
+
+  
+</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+<!-- <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script type="module" src="connexion.js"></script>
+<script  type="module" src="main.js"></script>
+<script  type="module" src="animated.js"></script>
+
+
+</body>
+</html>

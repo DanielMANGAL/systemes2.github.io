@@ -1,0 +1,747 @@
+
+body,html{
+    background-color: rgb(24, 27, 27);
+   
+    height: 97%;
+    margin:0;
+    padding: 5px;;
+    overflow:none;
+}
+
+#container{
+    display: grid;
+    margin-left: 15px;
+    margin-right: 10px;
+    grid-template-columns: 19fr 10fr;
+    grid-template-rows: 1fr 20fr;
+    height: 100%;
+    background-color: rgb(12 255 221);
+   
+}
+
+
+#question{
+    background-color:rgb(31, 11, 87);
+    border: 3px solid rgb(9, 9, 105);
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 20px;
+    color: white;
+}
+#boxQuestion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+}
+#generalTouche{
+    cursor:pointer;
+    display:flex;
+}
+#calculs{
+    background-color: rgb(12 255 221);
+    border: 3px solid rgb(31, 11, 87);
+    font-size: 100px;
+    display: grid;
+    grid-template-columns: 4fr 1fr; 
+}
+#calculMeme{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: rgb(0 255 255);
+    font-size: 100px;
+}
+#touche{
+  
+    background-color: silver;
+    height: 530px;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+}
+#corriger{
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+#message{
+    font-size: 20px;
+}
+input{
+    font-size: 30px;
+    width: 43px;
+}
+#complement{
+    background-color: yellowgreen;
+    border: 3px solid rgb(31, 11, 87);
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+#progress{
+    background-color: yellowgreen;
+    border: 3px solid rgb(31, 11, 87);
+}
+
+#image{
+    background-color: rgb(200, 236, 128);
+    border: 3px solid rgb(31, 11, 87);
+}
+
+#caption{
+    background-color: rgb(84, 150, 22);
+    border: 3px solid rgb(31, 11, 87);
+}
+
+.ligneCalcul{
+    display:  none;
+    font-size: 34px;
+  }
+
+ .ensemble{
+    display: grid;
+    /* grid-template-columns: repeat(2,1fr); */
+    grid-template-rows: repeat(3,1fr);
+    padding: 1px;
+    gap: 1px;
+    /* height: 500px; */
+    height: 100%;
+}
+
+/* style the button */
+
+button{
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
+    border-radius: 10px;
+    }
+    button:hover {
+        background-color: #f7262642; /* Green */
+        color: white;
+      }
+
+      #corriger{
+   
+        background-color: #0044ff;
+    
+    }
+    #pas{
+        background-color: #d0ff00;
+    }
+    #commencer{
+        background-color: #ff00f2;
+    }    
+#again{
+    background-color: #ff8000;
+    color:rgb(238, 228, 116);
+    border-radius: 10px;
+    font-weight: bold;
+}
+.N{
+    background: #4CAF50;
+    color:white;
+}
+.Z{
+    background: #09430b;
+   color: white
+    
+}
+.D{
+    background: #2a0c5e;
+   color: white
+    
+}
+.Q{
+    background: #a62d98;
+   color: white
+    
+}
+.R{
+    background: #ebac18;
+   color: white
+    
+}
+
+    /* element cache */
+
+    #cache{
+        display: none;
+    }
+
+    .image{
+        background-color: rgb(0, 0, 0)
+        }
+        #image{
+            background-image:  url("tortue.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+
+
+    /* modal styling */
+    
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+
+p{
+    font-size: 50px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-content{
+    background-color: red;
+}
+
+
+
+
+
+
+
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content2 {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+
+p{
+    font-size: 50px;
+    background-color: rgb(0, 89, 255);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-content2{
+    background-color: rgb(0, 17, 255);
+}
+
+
+
+
+
+
+
+
+
+
+.modal4 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+
+  }
+.modal-content4 {
+    background-color: #fefefe;
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 8px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    font-size: 15px;
+ 
+  }
+  .modal-content5 {
+    background-color: #fefefe;
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 8px;
+    border: 1px solid #888;
+    width: 65%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    height:80%;
+    font-size: 25px;
+
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+ 
+  }
+#myModal6{
+    font-size:10px;
+}
+#taille4{
+    font-size:24px;
+}
+  #evaluer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-left:10px
+  }
+  #evaluer,#login{
+    margin: 30px;
+    padding:5px;
+    height: 70px;
+    width: 150px
+  }
+#infos{
+    display:flex;
+    flex-direction:row;
+}
+p{
+    font-size: 50px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-content4{
+    background-color: red;
+
+}
+
+
+#nom, #prenom,#identifiant,#email{
+    width:300px;
+}
+
+#evaluer,#login{
+    background-color: darkgoldenrod;
+}
+
+
+
+/* style progress button */
+
+
+.etapes{
+    border: 5px solid rgb(4, 75, 4);
+    font-weight: bold;
+    border-radius: 0px 50px 50px 0px;
+}
+
+#stade2, #stade3, #stade4{
+    opacity: 0.3;
+}
+
+/* modal présentation résultat */
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content3{
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+
+p{
+    font-size: 50px;
+    background-color: rgb(255, 221, 0);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-content3{
+    background-color: rgb(255, 157, 0);
+}
+
+
+
+
+
+
+
+
+
+
+/* tableau de signes construction */
+
+#tbSignes{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+#un{
+    background-color: rgb(102, 133, 19);
+  
+}
+#deux{
+    background-color: rgb(217, 255, 0);
+    grid-column-start: 2;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+#trois{
+    background-color: rgb(123, 255, 0);
+}
+#quatre{
+    background-color: rgb(0, 255, 157);
+    grid-column-start: 2;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.bout{
+    border: 3px solid black;
+}
+span{
+    font-size: 75px;
+}
+body{
+    font-size: 15px;
+}
+#question1,#question2, #question3,#question4,#question5, #question6,#question7,#question8, #question9,#question10{
+    font-size: 25px;
+}
+input{
+    width: 45px;
+}
+.ending{
+    width:120px
+}
+table {
+    border: 1px solid black;
+    border-radius: 10px;
+    border-top: none;
+    border-bottom: none;
+    display:inline;
+   
+
+     
+      
+      
+  }
+
+  .aligne{
+        display:inline;
+  }
+
+  body{
+    overflow:none;
+    font-size: 20px;
+  }
+  #enonce,#question{
+    height:100px;
+  }
+
+
+  #minuteur{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .taille{
+    font-size:25px;
+  }
+  #progress{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #commentaire{
+    width: 500px;
+    font-size:20px
+  }
+  #complement{
+    height:200px;
+    display: grid;
+    grid-template-rows: 3;
+ }
+ #resultatsCamarades{
+    height:410px;
+    overflow-y: auto;
+    background-color: #073409;
+
+ }
+ #resultatsCamarades2{
+    height:610px;
+    overflow-y: auto;
+    background-color: #073409;
+
+ }
+
+
+ #nbEntrainements{
+    font-size: 20px;
+    color: rgb(6, 78, 8)
+ }
+
+ #progress{
+    display: grid;
+    grid-template-rows: auto;
+ }
+ #maxEntrainements{
+    font-size: 20px
+ }
+ #nbMaxEntrainements{
+    font-size: 15px
+ }
+
+ 
+.container,.container2 {
+  /* display: flex; */
+/*   border:1px solid red; */
+  height:5%;
+  margin-bottom:45px;
+  /* align-items: center; */
+}
+
+svg {
+    display: block;
+    font: 1.55em 'Montserrat';
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: #4D163D;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: #BD0034;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #BD0034;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: #FDB731;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+
+@media (max-width:500px){
+    #caption{
+        display:none;
+    }
+        body{
+            height: auto;
+            font-size: 15px;
+            padding:0;
+            width: 100%;
+        }
+    #container{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height:700px;
+    }
+    #question{
+        font-size: 10px;
+        height: 50px;
+    }
+    #calculs{
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+        height: 435px;
+    }
+    #touche{
+       display: flex;
+       flex-direction: column;
+       height: 500px;
+    
+    }
+    span{
+        font-size: 20px;
+    }
+    input{
+        font-size: 15px;
+        width: 20px;
+    }
+    #calculMeme{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    
+        background-color: rgb(0 255 255);
+     
+    }
+    .ligneCalcul{
+        font-size: 18px;
+    }
+    #progress{
+        font-size:15px;
+    }
+    
+    #image{
+        height:225px;
+        
+    }
+     #progress{
+        display: none;
+    
+     }
+     #caption{
+        display: none;
+     }
+    
+    p{
+    font-size: 15px;
+    }
+    #presentation,#attentionDiv{
+        font-size: 20px;
+    }
+    button{
+        height: 88px;
+    }
+    .ensemble{
+        height:30%;
+    }
+    .modal-content4{
+        background-color: purple ;
+        height:75%;
+        width:85%;
+        overflow:hide;
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        z-index: 999;
+        margin-left: 20px;
+        margin-top: 100px;
+    }
+    #infos{
+ 
+        display:grid;
+        grid-template-rows:repeat(4,1fr);
+        overflow:none;
+    }
+    #element{
+        height:100px;
+    }
+    #evaluer2{
+        height:200px;
+
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: none;
+    align-items: start;
+    margin-left: 0px;
+}
+#caption,#commentaire,#complement{
+    display:none;
+}#afficheEquation{
+    font-size:50px;
+}
+/* #calculs{
+    overflow-y: auto;
+} */
+#myModal6{
+    display:grid;
+grid-template-rows: 1fr 1fr;
+}
+.modal-content5{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    width:87%;
+    height:90%;
+}
+#taille4{
+    font-size: 15px;
+}
+#autre,#beginAgain{
+    height:50px;
+}
+#resultatsCamarades2{
+    height: 490px;
+    font-size:20px
+}
+#touche{
+    position:fixed;
+    width:80px;
+    right:0;
+}
+#calculMeme{
+    height:600px;
+ 
+}
+    }
+
+    #calculMeme{
+        height:500px;
+       overflow-y:auto;
+     
+    }
+    
